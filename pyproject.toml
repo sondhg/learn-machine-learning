@@ -10,3 +10,7 @@ dependencies = [
   "scipy>=1.18.1",
   "torch>=2.14.0",
 ]
+
+[tool.ruff.lint]
+# Disable fix for unused imports (`F401`).
+unfixable = ["F401"]
