@@ -8,9 +8,17 @@ dependencies = [
   "matplotlib>=3.11.2",
   "numpy>=2.5.3",
   "scipy>=1.18.1",
-  "torch>=2.14.0",
+  "torch==2.14.*",
 ]
 
 [tool.ruff.lint]
 # Disable fix for unused imports (`F401`).
 unfixable = ["F401"]
+
+[tool.uv.sources]
+torch = { index = "pytorch-cu126" }
+
+[[tool.uv.index]]
+name = "pytorch-cu126"
+url = "https://download.pytorch.org/whl/cu126"
+explicit = true
